@@ -7,7 +7,9 @@ const Root = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <Outlet></Outlet>
+            <div className="min-h-screen py-40">
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );

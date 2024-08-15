@@ -11,7 +11,7 @@ import logo from '../../../assets/Images/logo.png'
 const NavBar = () => {
   const { user, logOutUser } = useAuth();
   // const [isAdmin] = useAdmin();
-  const isAdmin=true;
+  const isAdmin = true;
 
   const handleSignOut = () => {
     logOutUser()
@@ -22,12 +22,12 @@ const NavBar = () => {
 
 
   const links = (
-    <div className="text-black lg:text-white flex flex-col lg:flex-row gap-5">
+    <div className="text-white lg:text-white flex flex-col lg:flex-row gap-5">
       <NavLink className="px-5 text-lg" to="/">
         Home
       </NavLink>
-      <NavLink className="px-5 text-lg" to="/apartment">
-        Apartment
+      <NavLink className="px-5 text-lg" to="/products">
+        Products
       </NavLink>
       <NavLink className="px-5 text-lg" to="/about">
         About
@@ -61,7 +61,7 @@ const NavBar = () => {
             </div>
             <nav
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 border rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-6 z-[1] p-2 shadow-2xl bg-gray-600  rounded-box w-52"
             >
               {links}
             </nav>
