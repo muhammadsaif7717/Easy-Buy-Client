@@ -64,24 +64,24 @@ const Products = () => {
     return (
         <div className="container mx-auto">
             <br /><hr /><br />
-            <div className="flex gap-4 justify-between items-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
                 {/* Search */}
-                <div className="relative">
+                <div className="relative w-full md:w-72 lg:w-96">
                     <input
                         type="text"
                         placeholder="Search by name"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="input input-bordered w-60 md:w-96"
+                        className="input input-bordered w-full "
                     />
-                    <button onClick={() => setSearchQuery(searchTerm)} className="btn btn-primary absolute right-0">Search</button>
+                    <button onClick={() => setSearchQuery(searchTerm)} className="btn btn-primary absolute right-[0%]">Search</button>
                 </div>
                 {/* Sorting */}
-                <div>
+                <div className="w-full md:w-72">
                     <select
                         value={sortBy}
                         onChange={(e) => setSortBy(e.target.value)}
-                        className="select select-bordered">
+                        className="select select-bordered w-full">
                         <option value="default">Sort by</option>
                         <option value="createdAt">Newly Added</option>
                         <option value="priceAsc">Price: Low to High</option>
@@ -98,7 +98,7 @@ const Products = () => {
                         <select
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
-                            className="select select-bordered">
+                            className="select select-bordered w-full md:w-52 lg:w-60">
                             <option value="">Select Category</option>
                             <option>Audio</option>
                             <option>Cameras</option>
@@ -114,7 +114,7 @@ const Products = () => {
                         <select
                             value={brand}
                             onChange={(e) => setBrand(e.target.value)}
-                            className="select select-bordered">
+                            className="select select-bordered w-full md:w-52 lg:w-60">
                             <option value="">Select Brand</option>
                             <option>Samsung</option>
                             <option>Apple</option>
@@ -126,7 +126,7 @@ const Products = () => {
                                 setMinPrice(min);
                                 setMaxPrice(max);
                             }}
-                            className="select select-bordered">
+                            className="select select-bordered w-full md:w-52 lg:w-60">
                             <option value="">Select Price Range</option>
                             <option value="10-49.99">10$ to 49.99$</option>
                             <option value="50-99.99">50$ - 99.99$</option>
