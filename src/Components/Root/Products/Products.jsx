@@ -169,7 +169,7 @@ const Products = () => {
                     ))
                 )}
             </div>
-            <div className="pagination-controls flex justify-center mt-14">
+            <div className="pagination-controls flex justify-center mt-14 scale-75 md:scale-100">
                 <ReactPaginate
                     previousLabel={"Previous"}
                     nextLabel={"Next"}
