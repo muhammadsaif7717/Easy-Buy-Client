@@ -1,0 +1,452 @@
+[
+    {
+        "name": "Wireless Bluetooth Headphones",
+        "image": "https://i.ibb.co/5RnFthX/top-view-hearing-aids-kit-23-2149706002.jpg",
+        "description": "High-quality wireless Bluetooth headphones with noise-cancellation.",
+        "price": 59.99,
+        "category": "Electronics",
+        "ratings": 4.5,
+        "createdAt": "2024-08-10T08:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Gaming Laptop",
+        "image": "https://i.ibb.co/FhHpYk4/gaming-blank-banner-background-23-2150390433.jpg",
+        "description": "High-performance gaming laptop with powerful GPU and fast processor.",
+        "price": 1299.99,
+        "category": "Computers",
+        "ratings": 4.7,
+        "createdAt": "2024-08-01T10:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "4K Ultra HD Smart TV",
+        "image": "https://i.ibb.co/2c3CGHJ/view-computer-monitor-display-23-2150757407.jpg",
+        "description": "Smart TV with 4K resolution, built-in apps, and voice control.",
+        "price": 799.99,
+        "category": "Home Entertainment",
+        "ratings": 4.8,
+        "createdAt": "2024-07-25T14:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smartphone",
+        "image": "https://i.ibb.co/gMQsXzB/new-smartphone-mockup-floating-252953-7.jpg",
+        "description": "Latest model smartphone with a powerful camera and long battery life.",
+        "price": 999.99,
+        "category": "Mobile Phones",
+        "ratings": 4.6,
+        "createdAt": "2024-08-12T11:15:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Fitness Tracker",
+        "image": "https://i.ibb.co/JBjZFHv/flat-design-fitness-trackers-heart-rate-menu-23-2148515781.jpg",
+        "description": "Waterproof fitness tracker with heart rate monitor and GPS.",
+        "price": 79.99,
+        "category": "Wearables",
+        "ratings": 4.3,
+        "createdAt": "2024-08-05T09:45:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Digital Camera",
+        "image": "https://i.ibb.co/1vQHKck/white-desk-with-professional-camera-accessoires-1163-2737.jpg",
+        "description": "Compact digital camera with high resolution and multiple shooting modes.",
+        "price": 499.99,
+        "category": "Cameras",
+        "ratings": 4.4,
+        "createdAt": "2024-07-20T13:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smart Home Speaker",
+        "image": "https://i.ibb.co/2nFpjDH/high-angle-smart-speaker-home-23-2150171766.jpg",
+        "description": "Voice-controlled smart speaker with integrated home automation.",
+        "price": 149.99,
+        "category": "Smart Home",
+        "ratings": 4.5,
+        "createdAt": "2024-08-07T07:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Kettle",
+        "image": "https://i.ibb.co/wLLF7tk/kettle-cup-wall-background-1339-7169.jpg",
+        "description": "Fast-boiling electric kettle with temperature control and auto shut-off.",
+        "price": 29.99,
+        "category": "Kitchen Appliances",
+        "ratings": 4.2,
+        "createdAt": "2024-07-15T12:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Portable Charger",
+        "image": "https://i.ibb.co/r3qSV8X/powerbank-cellphone-wooden-table-1387-513.jpg",
+        "description": "High-capacity portable charger with fast charging capabilities.",
+        "price": 39.99,
+        "category": "Accessories",
+        "ratings": 4.6,
+        "createdAt": "2024-08-03T15:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Bluetooth Speaker",
+        "image": "https://i.ibb.co/85Yf3YX/large-round-white-bluetooth-speaker-gray-laptop-smartphone-side-181624-3694.jpg",
+        "description": "Portable Bluetooth speaker with long battery life and high-quality sound.",
+        "price": 69.99,
+        "category": "Audio",
+        "ratings": 4.7,
+        "createdAt": "2024-07-28T18:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smartwatch",
+        "image": "https://i.ibb.co/qjKzYcb/smartwatch-screen-digital-device-53876-97321.jpg",
+        "description": "Stylish smartwatch with fitness tracking and mobile notifications.",
+        "price": 199.99,
+        "category": "Wearables",
+        "ratings": 4.5,
+        "createdAt": "2024-08-02T10:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Home Security Camera",
+        "image": "https://i.ibb.co/VYdYp0Z/home-security-camera-181624-58835.jpg",
+        "description": "Wireless home security camera with night vision and motion detection.",
+        "price": 99.99,
+        "category": "Smart Home",
+        "ratings": 4.4,
+        "createdAt": "2024-07-21T11:45:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Toothbrush",
+        "image": "https://i.ibb.co/g68LTcn/electric-toothbrush-3d-isolated-realistic-illustration-with-replacement-brush-head-rubber-1441-2384.jpg",
+        "description": "Rechargeable electric toothbrush with multiple brushing modes.",
+        "price": 49.99,
+        "category": "Personal Care",
+        "ratings": 4.3,
+        "createdAt": "2024-08-04T08:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Instant Pot",
+        "image": "https://i.ibb.co/pbkrkyC/white-pot-1260-9.jpg",
+        "description": "Multi-functional pressure cooker with programmable cooking settings.",
+        "price": 89.99,
+        "category": "Kitchen Appliances",
+        "ratings": 4.7,
+        "createdAt": "2024-07-29T10:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smart Light Bulb",
+        "image": "https://i.ibb.co/8Xk6jwm/smart-home-lighting-system-controller-53876-103045.jpg",
+        "description": "Wi-Fi enabled light bulb with adjustable color and brightness.",
+        "price": 19.99,
+        "category": "Smart Home",
+        "ratings": 4.2,
+        "createdAt": "2024-07-30T15:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Gaming Mouse",
+        "image": "https://i.ibb.co/Hg7J3N6/view-neon-illuminated-gaming-desk-setup-with-keyboard-23-2149529380.jpg",
+        "description": "High-precision gaming mouse with customizable buttons and RGB lighting.",
+        "price": 49.99,
+        "category": "Accessories",
+        "ratings": 4.6,
+        "createdAt": "2024-08-06T09:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Noise-Cancelling Earbuds",
+        "image": "https://i.ibb.co/LC0Fh40/high-angle-hearing-aids-case-23-2149705997.jpg",
+        "description": "True wireless earbuds with active noise cancellation and long battery life.",
+        "price": 149.99,
+        "category": "Audio",
+        "ratings": 4.5,
+        "createdAt": "2024-07-26T12:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Tablet",
+        "image": "https://i.ibb.co/3ybkhgz/digital-tablet-screen-smart-tech-53876-96808.jpg",
+        "description": "High-resolution tablet with fast performance and long battery life.",
+        "price": 499.99,
+        "category": "Computers",
+        "ratings": 4.7,
+        "createdAt": "2024-08-09T14:15:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Air Purifier",
+        "image": "https://i.ibb.co/t4N3gYY/air-conditioner-mounted-white-wall-53876-128235.jpg",
+        "description": "High-efficiency air purifier with HEPA filter and quiet operation.",
+        "price": 199.99,
+        "category": "Home Appliances",
+        "ratings": 4.6,
+        "createdAt": "2024-07-22T17:45:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Coffee Maker",
+        "image": "https://i.ibb.co/KjZW61Q/view-3d-coffee-cup-with-machine-23-2151083728.jpg",
+        "description": "Programmable coffee maker with multiple brew settings and auto shut-off.",
+        "price": 79.99,
+        "category": "Kitchen Appliances",
+        "ratings": 4.4,
+        "createdAt": "2024-08-11T09:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Scooter",
+        "image": "https://i.ibb.co/rw2gyGb/two-e-scooter-parked-sidelines-road-park-1153-7327.jpg",
+        "description": "Foldable electric scooter with long battery life and fast charging.",
+        "price": 399.99,
+        "category": "Outdoor Equipment",
+        "ratings": 4.7,
+        "createdAt": "2024-07-31T12:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "LED Monitor",
+        "image": "https://i.ibb.co/87mFCMd/lcd-screen-mock-up-plasma-television-modern-video-system-hd-tv-digital-technology-1441-1840.jpg",
+        "description": "27-inch LED monitor with high resolution and ultra-thin bezels.",
+        "price": 249.99,
+        "category": "Computers",
+        "ratings": 4.5,
+        "createdAt": "2024-07-23T11:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Portable Blender",
+        "image": "https://i.ibb.co/ZKHw3mJ/blender-with-fruit-glass-juice-it-1121404-32505.jpg",
+        "description": "Compact and portable blender with rechargeable battery.",
+        "price": 34.99,
+        "category": "Kitchen Appliances",
+        "ratings": 4.3,
+        "createdAt": "2024-07-24T10:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smart Thermostat",
+        "image": "https://i.ibb.co/wsGt64n/smart-thermostat-wall-with-cozy-living-room-background-ideal-home-automation-1064559-95847.jpg",
+        "description": "Wi-Fi enabled smart thermostat with energy-saving features.",
+        "price": 149.99,
+        "category": "Smart Home",
+        "ratings": 4.5,
+        "createdAt": "2024-08-08T08:45:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Wireless Keyboard",
+        "image": "https://i.ibb.co/SN3v3cn/cute-workplace-with-keypad-clips-23-2147830074.jpg",
+        "description": "Ergonomic wireless keyboard with quiet keys and long battery life.",
+        "price": 69.99,
+        "category": "Computers",
+        "ratings": 4.4,
+        "createdAt": "2024-08-13T10:15:00Z",
+        "brand": ""
+    },
+    {
+        "name": "VR Headset",
+        "image": "https://i.ibb.co/1bCN4Bw/person-using-futuristic-virtual-reality-headset-video-games-23-2151133271.jpg",
+        "description": "Virtual reality headset with immersive 3D experience and motion tracking.",
+        "price": 299.99,
+        "category": "Gaming",
+        "ratings": 4.6,
+        "createdAt": "2024-08-14T16:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Grill",
+        "image": "https://i.ibb.co/cCvD917/view-modern-hot-air-fryer-with-cooked-food-23-2151737118.jpg",
+        "description": "Smokeless electric grill with adjustable temperature settings.",
+        "price": 99.99,
+        "category": "Kitchen Appliances",
+        "ratings": 4.5,
+        "createdAt": "2024-07-16T08:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smart Doorbell",
+        "image": "https://i.ibb.co/94TzfjG/photo-smart-doorbell-1320456-14457.jpg",
+        "description": "Wi-Fi enabled smart doorbell with HD video and two-way audio.",
+        "price": 129.99,
+        "category": "Smart Home",
+        "ratings": 4.6,
+        "createdAt": "2024-07-17T09:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Laptop Stand",
+        "image": "https://i.ibb.co/wCLjnWh/workplace-with-laptop-stand-near-eyeglasses-23-2148040478.jpg",
+        "description": "Adjustable laptop stand with cooling fan and ergonomic design.",
+        "price": 39.99,
+        "category": "Accessories",
+        "ratings": 4.3,
+        "createdAt": "2024-07-18T11:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Wireless Charging Pad",
+        "image": "https://i.ibb.co/BNnq7b0/top-view-storage-device-tablet-23-2149319329.jpg",
+        "description": "Fast wireless charging pad compatible with most smartphones.",
+        "price": 29.99,
+        "category": "Accessories",
+        "ratings": 4.5,
+        "createdAt": "2024-07-19T13:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Drone",
+        "image": "https://i.ibb.co/jTR220G/drone-flying-agricultural-field-with-camera-facing-towards-it-capturing-full-1115749-8575.jpg",
+        "description": "Compact drone with HD camera and easy-to-use controls.",
+        "price": 199.99,
+        "category": "Cameras",
+        "ratings": 4.6,
+        "createdAt": "2024-08-15T12:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Portable Projector",
+        "image": "https://i.ibb.co/TBN6ncs/portable-projector-set-up-cozy-backyard-outdoor-movie-night-with-friends-family-1064559-98067.jpg",
+        "description": "Mini portable projector with HD resolution and built-in speakers.",
+        "price": 229.99,
+        "category": "Home Entertainment",
+        "ratings": 4.4,
+        "createdAt": "2024-07-14T14:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Shaver",
+        "image": "https://i.ibb.co/d78wDrJ/watch-with-blue-face-that-says-watch-it-1047188-47008.jpg",
+        "description": "Rechargeable electric shaver with multi-directional blades.",
+        "price": 59.99,
+        "category": "Personal Care",
+        "ratings": 4.3,
+        "createdAt": "2024-07-13T07:45:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Bluetooth Tracker",
+        "image": "https://i.ibb.co/cJxsZgj/compact-bluetooth-tracker-keys-gadgets-1168612-330622.jpg",
+        "description": "Compact Bluetooth tracker to keep track of your belongings.",
+        "price": 19.99,
+        "category": "Accessories",
+        "ratings": 4.4,
+        "createdAt": "2024-07-12T10:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Toothbrush",
+        "image": "https://i.ibb.co/yRDD90z/electric-toothbush-poster-1284-21537.jpg",
+        "description": "Rechargeable electric toothbrush with pressure sensor and timer.",
+        "price": 39.99,
+        "category": "Personal Care",
+        "ratings": 4.5,
+        "createdAt": "2024-07-11T09:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Cordless Vacuum Cleaner",
+        "image": "https://i.ibb.co/N37FRJZ/black-cord-is-connected-cable-that-has-blue-black-device-1123160-2732.jpg",
+        "description": "Lightweight cordless vacuum cleaner with powerful suction.",
+        "price": 199.99,
+        "category": "Home Appliances",
+        "ratings": 4.7,
+        "createdAt": "2024-07-10T08:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Toothbrush",
+        "image": "https://i.ibb.co/c8RBhHS/sonic-electric-toothbrush-vibrant-smile-895561-27943.jpg",
+        "description": "Electric toothbrush with multiple brushing modes and long battery life.",
+        "price": 59.99,
+        "category": "Personal Care",
+        "ratings": 4.4,
+        "createdAt": "2024-07-09T07:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Mechanical Keyboard",
+        "image": "https://i.ibb.co/YkT7JtX/red-black-blue-white-custom-gaming-keyboard-1123896-13625.jpg",
+        "description": "Mechanical keyboard with customizable RGB lighting and tactile feedback.",
+        "price": 99.99,
+        "category": "Computers",
+        "ratings": 4.6,
+        "createdAt": "2024-07-08T06:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smart Door Lock",
+        "image": "https://i.ibb.co/SsvCbqY/door-knobs-handles-realistic-composition-with-human-hand-holding-smartphone-unlock-app-front-door-12.jpg",
+        "description": "Keyless smart door lock with biometric authentication and remote control.",
+        "price": 179.99,
+        "category": "Smart Home",
+        "ratings": 4.5,
+        "createdAt": "2024-07-07T12:15:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Portable Hard Drive",
+        "image": "https://i.ibb.co/GT5RkjP/external-hard-disk-drive-connect-laptop-53876-16205.jpg",
+        "description": "High-capacity portable hard drive with fast data transfer speeds.",
+        "price": 89.99,
+        "category": "Computers",
+        "ratings": 4.6,
+        "createdAt": "2024-07-06T14:45:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Wireless Earbuds",
+        "image": "https://i.ibb.co/1sYrGQN/top-perspective-black-wireless-earbuds-inside-charging-case-isolated-white-showcasing-gadget-accesso.jpg",
+        "description": "True wireless earbuds with water-resistant design and touch controls.",
+        "price": 129.99,
+        "category": "Audio",
+        "ratings": 4.5,
+        "createdAt": "2024-07-05T09:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Electric Pressure Cooker",
+        "image": "https://i.ibb.co/LQZwTYx/close-up-air-fryer-23-2151723481.jpg",
+        "description": "Electric pressure cooker with multiple cooking modes and large capacity.",
+        "price": 149.99,
+        "category": "Kitchen Appliances",
+        "ratings": 4.7,
+        "createdAt": "2024-07-04T08:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Smart Plug",
+        "image": "https://i.ibb.co/yNT2K5S/sleek-white-smart-outlet-with-usb-port-convenient-charging-clear-png-white-background-94628-89275.jpg",
+        "description": "Wi-Fi enabled smart plug for remote control of your devices.",
+        "price": 24.99,
+        "category": "Smart Home",
+        "ratings": 4.4,
+        "createdAt": "2024-07-03T10:00:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Portable Power Bank",
+        "image": "https://i.ibb.co/8bBCyHR/power-bank-mobile-phone-155003-7191.jpg",
+        "description": "High-capacity portable power bank with fast charging and multiple ports.",
+        "price": 49.99,
+        "category": "Accessories",
+        "ratings": 4.6,
+        "createdAt": "2024-07-02T11:30:00Z",
+        "brand": ""
+    },
+    {
+        "name": "Home Security System",
+        "image": "https://i.ibb.co/x707C4s/smart-home-automation-ai-generated-497837-36956.jpg",
+        "description": "Complete home security system with cameras, sensors, and mobile alerts.",
+        "price": 299.99,
+        "category": "Smart Home",
+        "ratings": 4.7,
+        "createdAt": "2024-07-01T15:00:00Z",
+        "brand": ""
+    }
+]
