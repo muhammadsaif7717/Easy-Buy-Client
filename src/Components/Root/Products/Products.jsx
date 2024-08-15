@@ -2,8 +2,9 @@ import { Rating } from "@smastrom/react-rating";
 import { useQuery } from "@tanstack/react-query";
 import '@smastrom/react-rating/style.css';
 import axios from "axios";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import './Products.css';
+import ReactPaginate from "react-paginate";
 
 const Products = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -13,6 +14,8 @@ const Products = () => {
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [sortBy, setSortBy] = useState('default'); // Set default sorting
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 9;
 
     const { data, isLoading } = useQuery({
         queryKey: ['products', searchQuery, brand, category, minPrice, maxPrice, sortBy],
@@ -22,26 +25,31 @@ const Products = () => {
         }
     });
 
-    const handleSearch = (products) => {
-        return products.filter(product =>
+    // Perform filtering and sorting
+    const filteredProducts = useMemo(() => {
+        if (!data?.products) return [];
+        return data.products.filter(product =>
             product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
             (brand ? product.brand === brand : true) &&
             (category ? product.category === category : true) &&
             (minPrice ? product.price >= parseFloat(minPrice) : true) &&
             (maxPrice ? product.price <= parseFloat(maxPrice) : true)
         );
-    };
+    }, [data?.products, searchQuery, brand, category, minPrice, maxPrice]);
 
-    const handleSort = (products) => {
-        if (sortBy === 'priceAsc') {
-            return products.sort((a, b) => a.price - b.price);
-        } else if (sortBy === 'priceDesc') {
-            return products.sort((a, b) => b.price - a.price);
-        } else if (sortBy === 'createdAt') {
-            return products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const sortedProducts = useMemo(() => {
+        if (!filteredProducts) return [];
+        switch (sortBy) {
+            case 'priceAsc':
+                return [...filteredProducts].sort((a, b) => a.price - b.price);
+            case 'priceDesc':
+                return [...filteredProducts].sort((a, b) => b.price - a.price);
+            case 'createdAt':
+                return [...filteredProducts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            default:
+                return filteredProducts; // Default: No sorting
         }
-        return products; // Default: No sorting, display as fetched
-    };
+    }, [filteredProducts, sortBy]);
 
     if (isLoading) return (
         <div className="flex justify-center h-full">
@@ -49,14 +57,16 @@ const Products = () => {
         </div>
     );
 
-    const filteredAndSortedProducts = handleSort(handleSearch(data.products));
+    // Calculate pagination details
+    const pageCount = Math.ceil(sortedProducts.length / itemsPerPage);
+    const paginatedProducts = sortedProducts.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
 
     return (
         <div className="container mx-auto">
             <br /><hr /><br />
-            <div className="flex  gap-4  justify-between items-center">
+            <div className="flex gap-4 justify-between items-center">
                 {/* Search */}
-                <div className="relative ">
+                <div className="relative">
                     <input
                         type="text"
                         placeholder="Search by name"
@@ -81,7 +91,7 @@ const Products = () => {
             </div>
             <br /><hr /><br />
             {/* Filtering */}
-            <div className="flex justify-between ">
+            <div className="flex justify-between">
                 <div className="w-full">
                     <h1 className="text-2xl text-center mb-5">Filter Products</h1>
                     <div className="flex flex-col md:flex-row gap-4 justify-between">
@@ -133,10 +143,10 @@ const Products = () => {
             </div>
             <br /><hr /><br />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                {filteredAndSortedProducts.length === 0 ? (
+                {paginatedProducts.length === 0 ? (
                     <div className="text-center">No products found.</div>
                 ) : (
-                    filteredAndSortedProducts.map((product) => (
+                    paginatedProducts.map((product) => (
                         <div key={product._id} className="card bg-base-100 w-full shadow-xl">
                             <figure><img src={product.image} alt={product.name} /></figure>
                             <div className="card-body">
@@ -158,6 +168,27 @@ const Products = () => {
                         </div>
                     ))
                 )}
+            </div>
+            <div className="pagination-controls flex justify-center mt-14">
+                <ReactPaginate
+                    previousLabel={"Previous"}
+                    nextLabel={"Next"}
+                    breakLabel={"..."}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={(selectedItem) => setCurrentPage(selectedItem.selected)}
+                    containerClassName={"pagination"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    breakClassName={"page-item"}
+                    breakLinkClassName={"page-link"}
+                    activeClassName={"active"}
+                />
             </div>
         </div>
     );
