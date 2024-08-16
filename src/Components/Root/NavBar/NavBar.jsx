@@ -12,7 +12,7 @@ import profile from '../../../assets/Images/profile.png'
 const NavBar = () => {
   const { user, logOutUser } = useAuth();
   // const [isAdmin] = useAdmin();
-  const isAdmin = false;
+  // const isAdmin = false;
 
   const handleSignOut = () => {
     logOutUser()
@@ -82,12 +82,12 @@ const NavBar = () => {
                 </div>
                 <ul tabIndex={0} className="dropdown-content border mt-1 z-50 menu p-2 shadow bg-base-100 rounded-box w-52 gap-2">
                   <li className="font-semibold text-xl pl-1">{user.displayName}</li>
-                  {
+                  {/* {
                     isAdmin ?
-                      <li><Link to={`/dashboard/admin-profile`} className="btn btn-primary border-none bg-orange-500 text-white">Dashboard</Link></li>
+                      <li><Link className="btn btn-primary border-none bg-orange-500 text-white">Dashboard</Link></li>
                       :
-                      <li><Link to={`/dashboard/my-profile`} className="btn btn-primary border-none bg-orange-500 text-white">Profile</Link></li>
-                  }
+                      <li><Link  className="btn btn-primary border-none bg-orange-500 text-white">Profile</Link></li>
+                  } */}
                   <li>
                     {
                       user ?

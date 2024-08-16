@@ -4,6 +4,7 @@ import Home from "../Components/Root/Home/Home";
 import ErrorPage from "../Components/Shared/DarkMode/ErrorPage/ErrorPage";
 import SignUp from "../Components/Root/SignUp/SignUp";
 import SignIn from "../Components/Root/SignIn/SignIn";
+import About from "../Components/Root/About/About";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>
+            },
+            {
+                path:'/about',
+                element: <About></About>
             },
             {
                 path:'/signUp',

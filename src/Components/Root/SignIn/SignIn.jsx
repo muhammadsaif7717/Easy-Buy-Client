@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 
 const SignIn = () => {
@@ -49,42 +50,45 @@ const SignIn = () => {
             })
     }
     return (
-        <div className="bg-base-300 flex justify-center items-center min-h-screen">
-            <div className="flex flex-col items-center justify-center gap-5 bg-[#282a358d] card w-96 p-5">
-                <h1 className="font-bold text-3xl text-green-500">Sign In Now!</h1>
-                <form onSubmit={handleCreateUser} className="flex flex-col gap-3 w-full">
-                    <div className="flex flex-col gap-2">
-                        <label className="font-semibold">Email </label>
-                        <input
-                            type="text"
-                            name="email"
-                            placeholder="Your Email..."
-                            className="input input-bordered"
-                            required
-                        />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <label className="font-semibold">Password</label>
-                        <input
-                            type="text"
-                            name="password"
-                            placeholder="Your Password..."
-                            className="input input-bordered"
-                            required
-                        />
+        <>
+        <Helmet><title>Easy Buy | Sign In</title></Helmet>
+            <div className="bg-base-300 flex justify-center items-center min-h-screen">
+                <div className="flex flex-col items-center justify-center gap-5 bg-[#282a358d] card w-96 p-5">
+                    <h1 className="font-bold text-3xl text-green-500">Sign In Now!</h1>
+                    <form onSubmit={handleCreateUser} className="flex flex-col gap-3 w-full">
+                        <div className="flex flex-col gap-2">
+                            <label className="font-semibold">Email </label>
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder="Your Email..."
+                                className="input input-bordered"
+                                required
+                            />
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <label className="font-semibold">Password</label>
+                            <input
+                                type="text"
+                                name="password"
+                                placeholder="Your Password..."
+                                className="input input-bordered"
+                                required
+                            />
+                        </div>
+                        <div className="mt-3">
+                            <button className="btn btn-primary w-full">Sign In</button>
+                        </div>
+                    </form>
+                    <div className="mt-3">
+                        <SocialLogin></SocialLogin>
                     </div>
                     <div className="mt-3">
-                        <button className="btn btn-primary w-full">Sign In</button>
+                        <p className="text-white">No account? <Link to={`/signUp`} className="text-blue-500 font-semibold">Sign Up</Link></p>
                     </div>
-                </form>
-                <div className="mt-3">
-                    <SocialLogin></SocialLogin>
-                </div>
-                <div className="mt-3">
-                    <p className="text-white">No account? <Link to={`/signUp`} className="text-blue-500 font-semibold">Sign Up</Link></p>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
