@@ -1,16 +1,19 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Components/Root/Footer/Footer";
 import NavBar from "../Components/Root/NavBar/NavBar";
 
 
 const Root = () => {
+    const location = useLocation();
+    const ifLoginPage = location.pathname.includes('signIn')
+    const ifSignUpPage = location.pathname.includes('signUp')
     return (
         <div>
-            <NavBar></NavBar>
-            <div className="min-h-screen py-40">
+            {(ifLoginPage || ifSignUpPage) || <NavBar></NavBar>}
+            <div className={ifLoginPage || ifSignUpPage ?"min-h-screen py-0":"min-h-screen py-40"}>
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+            {(ifLoginPage || ifSignUpPage) || <Footer></Footer>}
         </div>
     );
 };

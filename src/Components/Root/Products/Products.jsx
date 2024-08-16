@@ -1,12 +1,14 @@
 import { Rating } from "@smastrom/react-rating";
 import { useQuery } from "@tanstack/react-query";
 import '@smastrom/react-rating/style.css';
-import axios from "axios";
+
 import { useState, useMemo } from "react";
 import './Products.css';
 import ReactPaginate from "react-paginate";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
 const Products = () => {
+    const axiosPublic=useAxiosPublic();
     const [searchTerm, setSearchTerm] = useState('');
     const [searchQuery, setSearchQuery] = useState(''); // Stores the actual query used to filter results
     const [brand, setBrand] = useState('');
@@ -20,11 +22,11 @@ const Products = () => {
     const { data, isLoading } = useQuery({
         queryKey: ['products', searchQuery, brand, category, minPrice, maxPrice, sortBy],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/products'); // Fetch all products
+            const res = await axiosPublic.get('/products'); // Fetch all products
             return res.data;
         }
     });
-
+console.log(data)
     // Perform filtering and sorting
     const filteredProducts = useMemo(() => {
         if (!data?.products) return [];
