@@ -5,7 +5,7 @@
 
   <h2><strong>Project Overview</strong></h2>
   <p>
-    Easy Buy is a online shoping website. Here users can buy their products.
+    Easy Buy is a comprehensive online shopping website where users can browse, search, and purchase products. The application includes features for user authentication, product management, payment processing, and more.
   </p>
 
   <h2><strong>Features and Characteristics</strong></h2>
@@ -13,10 +13,10 @@
     <li><strong>User Authentication</strong></li>
     <li><strong>Product Management</strong></li>
     <li><strong>Payment Processing</strong> </li>
-    <li><strong>Responsive Design:</strong></li>
-    <li><strong>Real-time Notifications:</strong></li>
+    <li><strong>Responsive Design</strong></li>
+    <li><strong>Real-time Notifications</strong></li>
     <li><strong>Search, Sort and Filter</strong></li>
-    <li><strong>User-Friendly Interface:</strong></li>
+    <li><strong>User-Friendly Interface</strong></li>
   </ul>
 
   <h2><strong>Technologies Used</strong></h2>
