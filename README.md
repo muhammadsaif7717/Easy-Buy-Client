@@ -1,6 +1,6 @@
   <h1><strong>Easy Buy</strong></h1>
 
-  <h4>Server Repository: <a href="https://github.com/muhammadsaif7717/SCIC-Job-Task-2-Server.git">https://github.com/muhammadsaif7717/ResidencePro-Server.git</a></h4>
+  <h4>Server Repository: <a href="https://github.com/muhammadsaif7717/SCIC-Job-Task-2-Server.git">https://github.com/muhammadsaif7717/SCIC-Job-Task-2-Server.git</a></h4>
   <h4>Visit: https://scic-job-task-2-client.vercel.app </h4>
 
   <h2><strong>Project Overview</strong></h2>
