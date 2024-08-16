@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosPublic = axios.create({
-    baseURL: import.meta.env.VITE_BASE_URL,
+    baseURL:'https://scic-job-task-2-server.vercel.app',
 })
 
 const useAxiosPublic = () => {
