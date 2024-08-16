@@ -32,10 +32,10 @@
       <pre><code>git clone https://github.com/muhammadsaif7717/SCIC-Job-Task-2-Client.git</code></pre>
     </li>
     <li><strong>Navigate to the Project Directory:</strong>
-      <pre><code>cd ResidencePro-Client</code></pre>
+      <pre><code>cd SCIC-Job-Task-2-Client</code></pre>
     </li>
     <li><strong>Install Dependencies:</strong>
-      <pre><code>npm install</code></pre>
+      <pre><code>npm install react-router-dom localforage match-sorter sort-by</code></pre>
       <a href='https://github.com/muhammadsaif7717/SCIC-Job-Task-2-Client/blob/main/package.json' target='_blank'>View all dependencies</a>
     </li>
     <li><strong>Configure Environment Variables:</strong>
@@ -55,4 +55,4 @@
     <li><strong>Open Your Browser:</strong> Go to <a href="http://localhost:5173">http://localhost:5173</a> to view the project.</li>
   </ol>
 
-  <p>Explore and manage properties efficiently with Easy Buy!</p>
+  <p>Explore and manage products efficiently with Easy Buy!</p>
