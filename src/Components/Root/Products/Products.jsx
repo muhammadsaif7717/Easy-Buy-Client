@@ -8,7 +8,7 @@ import ReactPaginate from "react-paginate";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
 const Products = () => {
-    const axiosPublic=useAxiosPublic();
+    const axiosPublic = useAxiosPublic();
     const [searchTerm, setSearchTerm] = useState('');
     const [searchQuery, setSearchQuery] = useState(''); // Stores the actual query used to filter results
     const [brand, setBrand] = useState('');
@@ -26,7 +26,7 @@ const Products = () => {
             return res.data;
         }
     });
-console.log(data)
+    console.log(data)
     // Perform filtering and sorting
     const filteredProducts = useMemo(() => {
         if (!data?.products) return [];
@@ -54,7 +54,7 @@ console.log(data)
     }, [filteredProducts, sortBy]);
 
     if (isLoading) return (
-        <div className="flex justify-center h-full">
+        <div className="flex justify-center min-h-[60vh]">
             <span className="loading loading-dots loading-lg"></span>
         </div>
     );
@@ -102,24 +102,33 @@ console.log(data)
                             onChange={(e) => setCategory(e.target.value)}
                             className="select select-bordered w-full md:w-52 lg:w-60">
                             <option value="">Select Category</option>
+                            <option>Accessories</option>
                             <option>Audio</option>
                             <option>Cameras</option>
                             <option>Computers</option>
+                            <option>Electronics</option>
                             <option>Gaming</option>
-                            <option>Home Appliances</option>
-                            <option>Home Entertainment</option>
                             <option>Kitchen Appliances</option>
+                            <option>Mobile Phones</option>
                             <option>Personal Care</option>
                             <option>Smart Home</option>
-                            <option>Accessories</option>
+                            <option>Wearables</option>
                         </select>
                         <select
                             value={brand}
                             onChange={(e) => setBrand(e.target.value)}
                             className="select select-bordered w-full md:w-52 lg:w-60">
                             <option value="">Select Brand</option>
-                            <option>Samsung</option>
-                            <option>Apple</option>
+                            <option>AxcoTube</option>
+                            <option>CareBite</option>
+                            <option>CookZone</option>
+                            <option>ComputerMenia</option>
+                            <option>CurciteLab</option>
+                            <option>FitTech</option>
+                            <option>GameVibe</option>
+                            <option>HomeLab</option>
+                            <option>RIOBD</option>
+                            <option>SoundWave</option>
                         </select>
                         <select
                             value={`${minPrice}-${maxPrice}`}
@@ -130,15 +139,15 @@ console.log(data)
                             }}
                             className="select select-bordered w-full md:w-52 lg:w-60">
                             <option value="">Select Price Range</option>
-                            <option value="10-49.99">10$ to 49.99$</option>
-                            <option value="50-99.99">50$ - 99.99$</option>
-                            <option value="100-199.99">100$ - 199.99$</option>
-                            <option value="200-499.99">200$ - 499.99$</option>
-                            <option value="500-999.99">500$ - 999.99$</option>
-                            <option value="1000-1999.99">1000$ - 1999.99$</option>
-                            <option value="2000-4999.99">2000$ - 4999.99$</option>
-                            <option value="5000-9999.99">5000$ - 9999.99$</option>
-                            <option value="10000-">10000$+</option>
+                            <option value="10-49.99">10 - 49.99 $</option>
+                            <option value="50-99.99">50 - 99.99 $</option>
+                            <option value="100-199.99">100 - 199.99 $</option>
+                            <option value="200-499.99">200 - 499.99 $</option>
+                            <option value="500-999.99">500 - 999.99 $</option>
+                            <option value="1000-1999.99">1000 - 1999.99 $</option>
+                            <option value="2000-4999.99">2000 - 4999.99 $</option>
+                            <option value="5000-9999.99">5000 - 9999.99 $</option>
+                            <option value="10000-">10000 $ +</option>
                         </select>
                     </div>
                 </div>
@@ -146,7 +155,7 @@ console.log(data)
             <br /><hr /><br />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {paginatedProducts.length === 0 ? (
-                    <div className="text-center">No products found.</div>
+                    <div className="text-xl">No products found...</div>
                 ) : (
                     paginatedProducts.map((product) => (
                         <div key={product._id} className="card bg-base-100 w-full shadow-xl">
