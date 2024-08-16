@@ -10,7 +10,7 @@ const Root = () => {
     return (
         <div>
             {(ifLoginPage || ifSignUpPage) || <NavBar></NavBar>}
-            <div className={ifLoginPage || ifSignUpPage ?"min-h-screen py-0":"min-h-screen py-40"}>
+            <div className={ifLoginPage || ifSignUpPage ?"min-h-screen py-0":"min-h-screen pb-10 pt-[105px]"}>
                 <Outlet></Outlet>
             </div>
             {(ifLoginPage || ifSignUpPage) || <Footer></Footer>}

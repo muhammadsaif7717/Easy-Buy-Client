@@ -65,7 +65,7 @@ console.log(data)
 
     return (
         <div className="container mx-auto">
-            <br /><hr /><br />
+            <hr /><br />
             <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
                 {/* Search */}
                 <div className="relative w-full md:w-72 lg:w-96">
