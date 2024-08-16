@@ -1,14 +1,15 @@
-import axios from "axios";
-// import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 
 const SignUp = () => {
-    const { user: saif } = useAuth()
-    // const {setEmailOrPhone}=useContext(AuthContext)
-    const naviagate = useNavigate();
+    const { createNewUser, updateUserProfile } = useAuth()
+    const navigate = useNavigate();
+    const location = useLocation();
+    const axiosPublic = useAxiosPublic();
 
     const handleCreateUser = (e) => {
         e.preventDefault();
@@ -16,15 +17,13 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const user = {
-            name: name,
-            email: email,
-            password: password,
-        }
-        console.log(user, saif)
-        axios.post(`http://localhost:5000/users`, user)
-            .then((res) => {
-                if (res.data.insertedId) {
+
+        //create new user
+        createNewUser(email, password)
+            .then(res => {
+                // console.log('New User', res.user)
+                if (res.user) {
+
                     Swal.fire({
                         position: "center",
                         icon: "success",
@@ -32,11 +31,39 @@ const SignUp = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    form.reset()
+
+                    // if not existing user post to database
+                    const newUser = {
+                        name: name,
+                        email: email,
+                        role: 'user',
+                    }
+                    axiosPublic.post('/users', newUser)
+
+                    // then reset form
+                    form.reset();
+                    setTimeout(() => {
+                        navigate(location?.state?.from || '/');
+                    }, 1700);
                 }
+                //then update profile
+                updateUserProfile(name)
+                    .then(() => {
+                        // console.log('User Profile Updated')
+                    })
             })
-            .then(() => naviagate('/'))
-    }
+            .catch(err => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                });
+                console.log(err.message)
+            })
+    };
+
+
+
     return (
         <div className="bg-base-300 flex justify-center items-center min-h-screen">
             <div className="flex flex-col items-center justify-center gap-5 bg-[#282a358d] card w-96 p-5">
@@ -75,10 +102,13 @@ const SignUp = () => {
                     <div className="mt-3">
                         <button className="btn btn-primary w-full">Sign Up</button>
                     </div>
-                    <div className="mt-3">
-                        <p className="text-white">Already have account? <Link to={`/signIn`} className="text-blue-500 font-semibold">Sign In</Link></p>
-                    </div>
                 </form>
+                <div className="mt-3">
+                    <SocialLogin></SocialLogin>
+                </div>
+                <div className="mt-3">
+                    <p className="text-white">Already have account? <Link to={`/signIn`} className="text-blue-500 font-semibold">Sign In</Link></p>
+                </div>
             </div>
         </div>
     );

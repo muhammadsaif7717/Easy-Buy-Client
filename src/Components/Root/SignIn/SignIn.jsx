@@ -1,57 +1,58 @@
-import axios from "axios";
-// import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 
 const SignIn = () => {
-    const { user: saif } = useAuth()
-    // const {setEmailOrPhone}=useContext(AuthContext)
-    const naviagate = useNavigate();
+    const { loginUser } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleCreateUser = (e) => {
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const user = {
-            name: name,
-            email: email,
-            password: password,
-        }
-        console.log(user, saif)
-        axios.post(`http://localhost:5000/users`, user)
+
+        //login user
+        loginUser(email, password)
             .then((res) => {
-                if (res.data.insertedId) {
+                if (res.user) {
                     Swal.fire({
                         position: "center",
                         icon: "success",
-                        title: "User Created Successfully",
+                        title: "User Signed In Successfully",
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    form.reset()
+
+                    // then reset form
+                    form.reset();
+                    setTimeout(() => {
+                        navigate(location?.state?.from || '/');
+                    }, 1700);
                 }
+
             })
-            .then(() => naviagate('/'))
+            .then(() => {
+
+            })
+            .catch(() => {
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Invallid Email or Password",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            })
     }
     return (
         <div className="bg-base-300 flex justify-center items-center min-h-screen">
             <div className="flex flex-col items-center justify-center gap-5 bg-[#282a358d] card w-96 p-5">
                 <h1 className="font-bold text-3xl text-green-500">Sign In Now!</h1>
                 <form onSubmit={handleCreateUser} className="flex flex-col gap-3 w-full">
-                    <div className="flex flex-col gap-2">
-                        <label className="font-semibold">Name</label>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Your name..."
-                            className="input input-bordered"
-                            required
-                        />
-                    </div>
                     <div className="flex flex-col gap-2">
                         <label className="font-semibold">Email </label>
                         <input
@@ -75,10 +76,13 @@ const SignIn = () => {
                     <div className="mt-3">
                         <button className="btn btn-primary w-full">Sign In</button>
                     </div>
-                    <div className="mt-3">
-                        <p className="text-white">No account? <Link to={`/signUp`} className="text-blue-500 font-semibold">Sign Up</Link></p>
-                    </div>
                 </form>
+                <div className="mt-3">
+                    <SocialLogin></SocialLogin>
+                </div>
+                <div className="mt-3">
+                    <p className="text-white">No account? <Link to={`/signUp`} className="text-blue-500 font-semibold">Sign Up</Link></p>
+                </div>
             </div>
         </div>
     );

@@ -5,13 +5,14 @@ import { IoIosLogIn } from "react-icons/io";
 import DarkMode from "../../Shared/DarkMode/DarkMode";
 import logo from '../../../assets/Images/logo.png'
 // import useAdmin from "../../../Hooks/useAdmin";
+import profile from '../../../assets/Images/profile.png'
 
 
 
 const NavBar = () => {
   const { user, logOutUser } = useAuth();
   // const [isAdmin] = useAdmin();
-  const isAdmin = true;
+  const isAdmin = false;
 
   const handleSignOut = () => {
     logOutUser()
@@ -77,7 +78,7 @@ const NavBar = () => {
             user ?
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="btn rounded-full p-1 ">
-                  <img src={user?.photoURL} className="w-10 rounded-full" />
+                  <img src={profile} className="w-10 rounded-full" />
                 </div>
                 <ul tabIndex={0} className="dropdown-content border mt-1 z-50 menu p-2 shadow bg-base-100 rounded-box w-52 gap-2">
                   <li className="font-semibold text-xl pl-1">{user.displayName}</li>
@@ -85,7 +86,7 @@ const NavBar = () => {
                     isAdmin ?
                       <li><Link to={`/dashboard/admin-profile`} className="btn btn-primary border-none bg-orange-500 text-white">Dashboard</Link></li>
                       :
-                      <li><Link to={`/dashboard/my-profile`} className="btn btn-primary border-none bg-orange-500 text-white">Dashboard</Link></li>
+                      <li><Link to={`/dashboard/my-profile`} className="btn btn-primary border-none bg-orange-500 text-white">Profile</Link></li>
                   }
                   <li>
                     {
@@ -102,7 +103,7 @@ const NavBar = () => {
                 </ul>
               </div>
               :
-              <Link to={`/sign-in`} className=" text-2xl  p-2 rounded-lg  bg-blue-600 text-white"><IoIosLogIn></IoIosLogIn> </Link>
+              <Link to={`/signIn`} className=" text-2xl  p-2 rounded-lg  bg-blue-600 text-white"><IoIosLogIn></IoIosLogIn> </Link>
           }
 
         </div>
