@@ -8,22 +8,21 @@ const DarkMode = () => {
   // Function to toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    const newTheme = darkMode ? "dark" : "light";
+    const newTheme = darkMode ? "light" : "dark";
     document.querySelector("body").setAttribute("data-theme", newTheme);
   };
 
   return (
-    <div className="dark-mode-container flex justify-center items-center space-x-2 mb-4 border rounded-full border-gray-500 w-12">
+    <div className="dark-mode-container flex justify-center items-center space-x-2 mb-4 border rounded-full bg-base-100  w-12 h-[47px]">
       {!darkMode && (
-        <CiSun
-          className="w-8 h-8 cursor-pointer text-yellow-500"
+        <FaMoon
+          className="w-[33px] h-8 cursor-pointer text-black py-1"
           onClick={toggleDarkMode}
         />
       )}
       {darkMode && (
-
-        <FaMoon
-          className="w-[33px] h-8 cursor-pointer text-black py-1"
+        <CiSun
+          className="w-8 h-8 cursor-pointer text-yellow-500"
           onClick={toggleDarkMode}
         />
       )}

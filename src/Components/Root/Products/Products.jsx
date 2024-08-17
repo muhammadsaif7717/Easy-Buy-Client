@@ -6,6 +6,7 @@ import { useState, useMemo } from "react";
 import './Products.css';
 import ReactPaginate from "react-paginate";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+import { FaDollarSign } from "react-icons/fa";
 
 const Products = () => {
     const axiosPublic = useAxiosPublic();
@@ -47,7 +48,7 @@ const Products = () => {
             case 'priceDesc':
                 return [...filteredProducts].sort((a, b) => b.price - a.price);
             case 'createdAt':
-                return [...filteredProducts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                return [...filteredProducts].sort((a, b) => new Date(convertUTCToSimpleFormat(b.createdAt)) - new Date(convertUTCToSimpleFormat(a.createdAt)));
             default:
                 return filteredProducts; // Default: No sorting
         }
@@ -58,6 +59,24 @@ const Products = () => {
             <span className="loading loading-dots loading-lg"></span>
         </div>
     );
+
+    //date fixing
+    function convertUTCToSimpleFormat(utcTimestamp) {
+        const utcDate = new Date(utcTimestamp);
+
+        // Convert to a simpler format (e.g., YYYY-MM-DD HH:MM:SS)
+        const year = utcDate.getFullYear();
+        const month = String(utcDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const day = String(utcDate.getDate()).padStart(2, '0');
+        const hours = String(utcDate.getHours()).padStart(2, '0');
+        const minutes = String(utcDate.getMinutes()).padStart(2, '0');
+        const seconds = String(utcDate.getSeconds()).padStart(2, '0');
+
+        // Format as YYYY-MM-DD HH:MM:SS
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
+
+
 
     // Calculate pagination details
     const pageCount = Math.ceil(sortedProducts.length / itemsPerPage);
@@ -76,7 +95,7 @@ const Products = () => {
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="input input-bordered w-full "
                     />
-                    <button onClick={() => setSearchQuery(searchTerm)} className="btn btn-primary absolute right-[0%]">Search</button>
+                    <button onClick={() => setSearchQuery(searchTerm)} className="btn btn-primary absolute right-[0%] bg-orange-500 border-orange-500 text-white">Search</button>
                 </div>
                 {/* Sorting */}
                 <div className="w-full md:w-72">
@@ -163,17 +182,19 @@ const Products = () => {
                             <div className="card-body">
                                 <h2 className="card-title">
                                     {product.name}
-                                    <div className="badge badge-secondary">NEW</div>
+                                    <div className="badge badge-primary border-none text-black p-2 bg-[#FFB23F]">NEW</div>
                                 </h2>
-                                <p>{product.description}</p>
+                                <p className="text-base">{product.description}</p>
                                 <div className="card-actions justify-between">
+                                    <div className="font-semibold flex items-center justify-center ">Price: &nbsp;<span className="text-green-600">{product.price}</span> <FaDollarSign className="text-green-600" /></div>
+                                    <div className="font-semibold ">Brand: <span className="text-red-600">{product.brand}</span></div>
+                                    <div className="font-semibold">Category: <span className="text-base font-normal">{product.category}</span></div>
+                                    <div className="font-semibold ">Date: <span className="text-base font-normal">{convertUTCToSimpleFormat(product.createdAt)}</span></div>
                                     <Rating
                                         style={{ maxWidth: 180 }}
                                         value={product.ratings}
                                         readOnly
                                     />
-                                    <div className="badge badge-outline font-bold p-4">{product.price} $</div>
-                                    <div className="badge font-bold badge-outline p-4">{product.ratings}</div>
                                 </div>
                             </div>
                         </div>

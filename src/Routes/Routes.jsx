@@ -5,6 +5,7 @@ import ErrorPage from "../Components/Shared/DarkMode/ErrorPage/ErrorPage";
 import SignUp from "../Components/Root/SignUp/SignUp";
 import SignIn from "../Components/Root/SignIn/SignIn";
 import About from "../Components/Root/About/About";
+import Contact from "../Components/Root/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path:'/about',
                 element: <About></About>
+            },
+            {
+                path:'/contact',
+                element: <Contact></Contact>
             },
             {
                 path:'/signUp',

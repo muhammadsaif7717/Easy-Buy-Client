@@ -23,18 +23,21 @@ const NavBar = () => {
 
 
   const links = (
-    <div className="text-white lg:text-white flex flex-col lg:flex-row gap-5">
+    <div className="text-black font-medium flex flex-col lg:flex-row gap-5">
       <NavLink className="px-5 text-lg" to="/">
         Home
       </NavLink>
       <NavLink className="px-5 text-lg" to="/about">
         About
       </NavLink>
+      <NavLink className="px-5 text-lg" to="/contact">
+        Contact
+      </NavLink>
     </div>
   );
   return (
     <>
-      <div className="navbar bg-gray-500 bg-opacity-50 fixed max-w-screen-xl mx-auto  z-50 ">
+      <div className="navbar bg-[#FAE94E] fixed max-w-screen-xl mx-auto  z-50 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -44,7 +47,7 @@ const NavBar = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 scale-125"
+                className="h-5 w-5 scale-125 text-black"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -59,12 +62,12 @@ const NavBar = () => {
             </div>
             <nav
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-6 z-[1] p-2 shadow-2xl bg-gray-600  rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-2 z-[1] p-2 shadow-2xl border border-gray-300 bg-gray-100  rounded-box w-28"
             >
               {links}
             </nav>
           </div>
-          <Link to={`/`} className="btn btn-ghost text-2xl font-bold p-0 ">
+          <Link to={`/`} className="btn btn-ghost text-[#F97316] text-2xl font-bold p-0 ">
             <img src={logo} className="w-10" />
             Easy Buy
           </Link>
@@ -103,7 +106,7 @@ const NavBar = () => {
                 </ul>
               </div>
               :
-              <Link to={`/signIn`} className=" text-2xl  p-2 rounded-lg  bg-blue-600 text-white"><IoIosLogIn></IoIosLogIn> </Link>
+              <Link to={`/signIn`} className=" text-2xl  p-2 rounded-lg  bg-orange-500 text-white"><IoIosLogIn></IoIosLogIn> </Link>
           }
 
         </div>

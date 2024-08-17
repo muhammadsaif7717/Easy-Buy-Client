@@ -51,9 +51,9 @@ const SignIn = () => {
     }
     return (
         <>
-        <Helmet><title>Easy Buy | Sign In</title></Helmet>
-            <div className="bg-base-300 flex justify-center items-center min-h-screen">
-                <div className="flex flex-col items-center justify-center gap-5 bg-[#282a358d] card w-96 p-5">
+            <Helmet><title>Easy Buy | Sign In</title></Helmet>
+            <div className=" flex justify-center items-center min-h-screen">
+                <div className="flex flex-col items-center justify-center gap-5 border border-gray-200 shadow-2xl card w-96 p-5">
                     <h1 className="font-bold text-3xl text-green-500">Sign In Now!</h1>
                     <form onSubmit={handleCreateUser} className="flex flex-col gap-3 w-full">
                         <div className="flex flex-col gap-2">
@@ -84,7 +84,7 @@ const SignIn = () => {
                         <SocialLogin></SocialLogin>
                     </div>
                     <div className="mt-3">
-                        <p className="text-white">No account? <Link to={`/signUp`} className="text-blue-500 font-semibold">Sign Up</Link></p>
+                        <p className="">No account? <Link to={`/signUp`} className="text-blue-500 font-semibold">Sign Up</Link></p>
                     </div>
                 </div>
             </div>
